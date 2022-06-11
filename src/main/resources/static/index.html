@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body class="p-5">
+    <h1 class="mb-4">OpenSky data viewer</h1>
+
+    <h4 class="mb-3"><span>Flights over the Netherlands per hour</span><span id="flight-count" class="badge bg-primary ms-2">0</span></h4>
+
+    <h4>Top 3 countries of origin</h4>
+    <div class="ms-4 mb-3">
+        <h4><span id="top-name-0"></span><span id="top-count-0" class="badge bg-primary ms-2">0</span></h4>
+        <h4><span id="top-name-1"></span><span id="top-count-1" class="badge bg-primary ms-2">0</span></h4>
+        <h4><span id="top-name-2"></span><span id="top-count-2" class="badge bg-primary ms-2">0</span></h4>
+    </div>
+
+    <h4>Altitude slices</h4>
+    <li class="list-group-item d-none" id="slice-dummy"><span class="altitude badge bg-primary d-block"></span><span class="plane-container"></span></li>
+    <span class="badge bg-light text-dark d-none" id="plane-dummy-normal" style="margin: auto;width: 5.063%;margin-left: 0.1%;margin-right: 0.1%;"></span>
+    <span class="badge bg-danger d-none" id="plane-dummy-danger" style="margin: auto;width: 5.063%;margin-left: 0.1%;margin-right: 0.1%;"></span>
+    <ul class="list-group" id="altitude-slices"></ul>
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-delay="3000">
+            <div class="toast-header bg-light">
+                <strong class="me-auto">OpenSky</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body bg-light">
+                Data updated!
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="/main.js"></script>
+</body>
+</html>
